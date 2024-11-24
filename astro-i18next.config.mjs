@@ -1,5 +1,10 @@
 /** @type {import('astro-i18next').AstroI18nextConfig} */
 export default {
-    defaultLocale: "zh",
-    locales: ['en', 'zh']
+    defaultLanguage: 'zh',
+    supportedLanguages: ['en', 'zh'],
+    i18next: {
+        debug: true,
+        initImmediate: false,
+        fallbackLng: 'zh',
+    },
 };
