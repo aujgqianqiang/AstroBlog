@@ -4,8 +4,8 @@
 // Site title and description
 export const SITE_LANG = "zh";
 export const SITE_TAB = "Frosti";
-export const SITE_TITLE = "Frosti 🧊";
-export const SITE_DESCRIPTION = "A blog template";
+export const SITE_TITLE = "Welcome to aujg's blog";
+export const SITE_DESCRIPTION = "A blog website";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
