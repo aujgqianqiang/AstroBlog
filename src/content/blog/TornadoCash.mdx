@@ -1,0 +1,39 @@
+---
+title: Tornado Cash/crypto隐私赛道
+description: 重新开一个专栏督促自己每天每周都要持续阅读
+pubDate: 11 29 2024
+image: /image/image2.jpg
+categories:
+  - Reading
+tags:
+  - Reading
+---
+
+import Collapse from "../../components/blog/collapse.astro";
+import Diff from "../../components/blog/diff.astro";
+import Error from "../../components/blog/error.astro";
+import Info from "../../components/blog/info.astro";
+import Kbd from "../../components/blog/kbd.astro";
+import Success from "../../components/blog/success.astro";
+import Warning from "../../components/blog/warning.astro";
+import TimeLine from "../../components/page/TimeLine.astro";
+import LinkCard from "../../components/page/LinkCard.astro";
+
+在2022年熊市时，Tornado Cash被美国财政部制裁，理由是其被用来洗钱和转移非法资金。
+而在2024年的牛市，美国法院裁定财政部对 Tornado Cash 智能合约的制裁是非法的，因为这些智能合约是不变的，没有所有者或实体可以控制它们。
+这是一个风向标，随着特朗普政府的上台，加密货币的政策环境正在好转和松绑，
+之前很多不被看好的赛道又重新有了机会，典型就是隐私赛道。
+## 1、Tornado Cash是什么？
+Tornado Cash 是一个基于以太坊的隐私工具类智能合约，提供匿名和不可追踪的加密货币交易。  
+
+简单说，Tornado Cash就是一个混币器，大家把钱存进来，钱都混在一起，然后再提走。  
+
+Tornado Cash使用零知识证明（zk-SNARKs）来打破存款和取款地址之间的链上链接，从而提供交易的隐私性。  
+（1）存款：用户将资金放入池中（即存款）时，就会生成私人凭据（随机密钥），证明你已执行了存款操作。  
+（2）生成零知识证明：当用户想要提款时，他们需要在链下生成一个零知识证明（zk-SNARK），证明他们拥有对应于智能合约内某一存款的私钥，该证明不会泄漏私钥的具体内容。  
+（3）提交证明：用户向智能合约提交零知识证明和 Merkle 路径（为了证明存款的有效性）。如果证明通过，智能合约将允许从池中将等量的资产转移到用户提供的提款地址。  
+（4）中继服务：为了进一步保护隐私，用户可以选择使用中继服务（Relayer）。中继者代替用户发送提款交易，并支付 gas 费用，这样提款地址不必持有 ETH 来支付 gas。  
+总的来说，Tornado Cash 使用 zk-SNARKs 来确保用户在提款时证明他们拥有有效的存款凭证，而不透露是哪一个存款。这使得谁存款和谁提款之间没有可见的联系。其实原理很像中心化交易所，充币时有一个固定充值地址，但是提币时是从中心化的集体资金池地址提出到任意地址。  
+但是，Tornado Cash将中心化交易所链上化了，不需要中心化服务，全流程保护用户隐私。  
+
+
